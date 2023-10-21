@@ -1,16 +1,20 @@
+import "./assets/App.css"
 export function App () {
     return (
-       <article>
-        <header>
-            <img src="https://unavatar.io/zMiguezz/" alt="avatar-migue" />
-            <div>
+       <article className="tw-followCard">
+        <header className="tw-followCard-header">
+            <img 
+                className="tw-followCard-avatar" 
+                src="https://unavatar.io/zMiguezz/" 
+                alt="avatar-migue" />
+            <div className="twitter-followCard-info">
                 <strong>migue</strong>
-                <span>@zMiguezzz</span>
+                <span className="twitter-followCard-infoUserName">@zMiguezzz</span>
             </div>
         </header>
 
         <aside>
-            <button>
+            <button className="twitter-followCard-button">
                 Seguir
             </button>
         </aside>
