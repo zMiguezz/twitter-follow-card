@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-export function TwitterFollowCard ({ userName, name, isFollowing,}){
-    
+export function TwitterFollowCard ({ formatUserName, userName, name, isFollowing,}){
     
     return (
         <arteicle className="tw-followCard">
@@ -11,7 +10,7 @@ export function TwitterFollowCard ({ userName, name, isFollowing,}){
                 alt="avatar-migue" />
             <div className="twitter-followCard-info">
                 <strong>{name}</strong>
-                <span className="twitter-followCard-infoUserName">@{userName}</span>
+                <span className="twitter-followCard-infoUserName">{formatUserName(userName)}</span>
             </div>
         </header>
 
