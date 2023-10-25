@@ -1,8 +1,18 @@
-/* eslint-disable react/prop-types */
-export function TwitterFollowCard ({ formatUserName, userName, name, isFollowing,}){
-    
+import { useState } from 'react'
+
+export function TwitterFollowCard ({ userName, name }){
+    const [isFollowing, setIsFollowing] = useState(false)
+
+    const text = isFollowing ? 'Siguiendo': 'Seguir'
+    const buttonClassName = isFollowing 
+    ? 'tw-followCard-button is-following'     
+    : 'tw-followCard-button'
+
+    const handleClick = () => {
+        setIsFollowing(!isFollowing)
+    }
     return (
-        <arteicle className="tw-followCard">
+        <arteicle className="tw-followCard">\
         <header className="tw-followCard-header">
             <img 
                 className="tw-followCard-avatar" 
@@ -10,13 +20,13 @@ export function TwitterFollowCard ({ formatUserName, userName, name, isFollowing
                 alt="avatar-migue" />
             <div className="twitter-followCard-info">
                 <strong>{name}</strong>
-                <span className="twitter-followCard-infoUserName">{formatUserName(userName)}</span>
+                <span className="twitter-followCard-infoUserName">@{userName}</span>
             </div>
         </header>
 
         <aside>
-            <button className="twitter-followCard-button">
-                Seguir
+            <button className="twitter-followCard-button" onclick={handleClick}>
+                {text}
             </button>
         </aside>
        </arteicle>

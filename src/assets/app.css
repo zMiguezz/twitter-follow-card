@@ -34,14 +34,23 @@
     border-radius: 999px;
     padding: 6px 16px;
     font-weight: bold;
+    border: 1px solid #000;
 
 }
 .App-contendor {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px; 
 }
-.tw-followCard-button {
+.tw-followCard-button:hover{
     background-color: #ddd;
     transition: .3s ease background-color;
+}
+.tw-followCard-button.isfollowing {
+    border: 1px solid red;
+
+}
+.tw-followCard-button.isfollowing:hover{
+    border: 1pxd solid red;
+    background: red;
 }
